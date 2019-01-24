@@ -1,14 +1,4 @@
-2018-12-17 21:08:11,658 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-18 21:52:40,616 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-18 21:53:06,984 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-18 21:53:35,862 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-18 21:54:08,287 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-18 22:00:13,253 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-31 16:01:24,655 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-31 17:47:08,397 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-31 18:44:12,717 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-31 20:19:11,172 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
-2018-12-31 20:19:34,184 ERROR: Exception on /index [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-12-31 20:19:49,018 ERROR: Exception on /index [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -47,7 +37,7 @@ Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-12-31 20:19:37,289 ERROR: Exception on /index [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-12-31 20:20:10,646 ERROR: Exception on /index [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -86,7 +76,18 @@ Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-12-31 20:19:40,283 ERROR: Exception on /index [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2019-01-16 21:33:35,834 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-16 21:33:56,780 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-16 21:38:11,001 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-16 21:40:51,337 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-16 21:41:33,511 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-16 22:08:51,570 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-16 22:24:01,293 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-20 16:40:46,209 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-20 16:53:56,632 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-20 17:17:06,978 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-20 17:29:37,572 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:49]
+2019-01-20 17:29:54,511 ERROR: Exception on /index [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -118,9 +119,9 @@ Traceback (most recent call last):
     raise value.with_traceback(tb)
   File "/home/pi/microblog/app/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/home/pi/microblog/app/templates/base.html", line 61, in top-level template code
+  File "/home/pi/microblog/app/templates/base.html", line 63, in top-level template code
     {% block content %}{% endblock %}
-  File "/home/pi/microblog/app/templates/index.html", line 6, in block "content"
+  File "/home/pi/microblog/app/templates/index.html", line 13, in block "content"
     {{ form.hidden_tag() }}
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
