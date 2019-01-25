@@ -1,4 +1,4 @@
-2019-01-21 20:54:47,125 ERROR: Exception on /login [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2019-01-25 21:36:56,125 ERROR: Exception on /login [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,7 +12,7 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/microblog/app/routes.py", line 58, in login
+  File "/home/pi/microblog/app/routes.py", line 59, in login
     return render_template('login.html', title='Sign In', form=form)
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
@@ -26,27 +26,21 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/pi/microblog/app/templates/login.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/pi/microblog/app/templates/base.html", line 63, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/pi/microblog/app/templates/login.html", line 29, in block "content"
-    <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
-    force_external=external)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
-2019-01-24 19:35:41,257 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:51]
-2019-01-24 20:08:37,938 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:51]
-2019-01-24 20:40:42,712 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:51]
-2019-01-24 20:41:54,366 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:53]
-2019-01-24 21:27:16,425 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:53]
-2019-01-24 21:41:46,954 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:53]
-2019-01-24 21:45:10,626 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:53]
+  File "/home/pi/microblog/app/templates/login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/pi/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 26, in block "body"
+    {% block scripts %}
+  File "/home/pi/microblog/app/templates/base.html", line 107, in block "scripts"
+    {{ moment.include_moment() }}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'moment' is undefined
+2019-01-25 21:50:37,335 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:55]
