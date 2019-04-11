@@ -1,3 +1,5 @@
 # ignore database
 *.db
 logs/*.log
+.env
+venv
