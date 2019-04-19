@@ -1,4 +1,4 @@
-2019-04-11 22:18:07,855 ERROR: Exception on /favicon.ico [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2019-04-11 22:22:04,365 ERROR: Exception on /favicon.ico [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
@@ -62,7 +62,8 @@ Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
-2019-04-11 22:18:14,257 ERROR: Exception on /auth/login [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2019-04-11 22:33:06,089 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:70]
+2019-04-11 22:33:23,099 ERROR: Exception on /auth/login [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -100,10 +101,12 @@ Traceback (most recent call last):
     {%- block html %}
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
     {% block body -%}
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
-    {% block navbar %}
-  File "/home/pi/microblog/app/templates/base.html", line 33, in block "navbar"
-    <a class="navbar-brand" href="{{ url_for('index') }}">Le blog</a>
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/pi/microblog/app/templates/base.html", line 95, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/pi/microblog/app/templates/auth/login.html", line 12, in block "app_content"
+    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
@@ -114,4 +117,4 @@ Traceback (most recent call last):
     force_external=external)
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+werkzeug.routing.BuildError: Could not build url for endpoint 'register'. Did you mean 'auth.register' instead?

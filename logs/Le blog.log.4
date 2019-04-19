@@ -1,68 +1,4 @@
-2019-04-11 22:18:14,659 ERROR: Exception on /favicon.ico [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
-    self.raise_routing_exception(req)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
-    raise request.routing_exception
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
-    self.url_adapter.match(return_rule=True)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
-    return handler(e)
-  File "/home/pi/microblog/app/errors/handlers.py", line 13, in not_found_error
-    return render_template('errors/404.html'), 404
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
-    context, ctx.app)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
-    rv = template.render(context)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/home/pi/microblog/app/templates/errors/404.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/pi/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
-    {%- block html %}
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
-    {% block body -%}
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
-    {% block navbar %}
-  File "/home/pi/microblog/app/templates/base.html", line 33, in block "navbar"
-    <a class="navbar-brand" href="{{ url_for('index') }}">Le blog</a>
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
-    force_external=external)
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
-2019-04-11 22:18:18,019 ERROR: Exception on /auth/login [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2019-04-11 22:33:29,918 ERROR: Exception on /auth/login [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -100,10 +36,12 @@ Traceback (most recent call last):
     {%- block html %}
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
     {% block body -%}
-  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
-    {% block navbar %}
-  File "/home/pi/microblog/app/templates/base.html", line 33, in block "navbar"
-    <a class="navbar-brand" href="{{ url_for('index') }}">Le blog</a>
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/pi/microblog/app/templates/base.html", line 95, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/pi/microblog/app/templates/auth/login.html", line 12, in block "app_content"
+    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
@@ -114,4 +52,63 @@ Traceback (most recent call last):
     force_external=external)
   File "/home/pi/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+werkzeug.routing.BuildError: Could not build url for endpoint 'register'. Did you mean 'auth.register' instead?
+2019-04-11 22:33:44,452 ERROR: Exception on /auth/login [GET] [in /home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/microblog/app/auth/routes.py", line 27, in login
+    return render_template('auth/login.html', title='Sign In', form=form)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/pi/microblog/app/templates/auth/login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/pi/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/pi/microblog/app/templates/base.html", line 95, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/pi/microblog/app/templates/auth/login.html", line 12, in block "app_content"
+    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/home/pi/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'register'. Did you mean 'auth.register' instead?
+2019-04-11 22:44:44,018 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:70]
+2019-04-12 19:38:35,411 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:70]
+2019-04-12 22:32:09,024 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:70]
+2019-04-12 22:34:12,432 INFO: Le blog startup [in /home/pi/microblog/app/__init__.py:70]
